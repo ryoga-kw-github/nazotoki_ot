@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://dhsm2gjt02k0y"]
 
 [ext_resource type="Texture2D" uid="uid://bxm3xo1l08vyc" path="res://icon.svg" id="1_rkhcw"]
@@ -83,3 +84,14 @@ script = ExtResource("5_miasj")
 [connection signal="button_down" from="Camera2D/btn_down" to="Camera2D/btn_down" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_right" to="Camera2D/btn_right" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_left" to="Camera2D/btn_left" method="_on_button_down"]
+=======
+[gd_scene load_steps=2 format=3 uid="uid://dhsm2gjt02k0y"]
+
+[ext_resource type="Texture2D" uid="uid://bxm3xo1l08vyc" path="res://icon.svg" id="1_rkhcw"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_rkhcw")
+>>>>>>> origin/master
