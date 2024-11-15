@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhsm2gjt02k0y"]
+
+[ext_resource type="Texture2D" uid="uid://bxm3xo1l08vyc" path="res://icon.svg" id="1_rkhcw"]
+[ext_resource type="Script" path="res://button.gd" id="2_p4wnw"]
+
+[node name="Main" type="Node2D"]
+scale = Vector2(1.95, 1.95)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-9.74359, -161.026)
+scale = Vector2(1.78606, 1.4976)
+texture = ExtResource("1_rkhcw")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(628.205, -10.7692)
+scale = Vector2(0.414063, 1.04688)
+texture = ExtResource("1_rkhcw")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(457.949, -132.82)
+scale = Vector2(0.788849, 0.594849)
+texture = ExtResource("1_rkhcw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.62, 1.62)
+zoom = Vector2(0.66, 0.66)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -55.3846
+offset_top = 116.923
+offset_right = 57.6154
+offset_bottom = 147.923
+text = "これはボタンです"
+script = ExtResource("2_p4wnw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.6658
+offset_top = 46.6667
+offset_right = 61.3342
+offset_bottom = 69.6667
+text = "テキストメッセージ"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
