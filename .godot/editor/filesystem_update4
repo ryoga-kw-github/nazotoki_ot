@@ -1,0 +1,6 @@
+res://main.tscn
+res://btn_up.gd
+res://btn_down.gd
+res://btn_right.gd
+res://btn_left.gd
+res://global.gd
