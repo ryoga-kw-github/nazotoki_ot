@@ -1,4 +1,6 @@
+Sprite2D
+Window
+CanvasLayer
 Button
 Label
 Camera2D
-Window

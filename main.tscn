@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d2j50fli4dq28" path="res://sample_haikei2.png" id="8_htae0"]
 [ext_resource type="Texture2D" uid="uid://dhxtv8oijttyx" path="res://sample_haikei3.png" id="9_647dn"]
 [ext_resource type="Texture2D" uid="uid://clkimmd58pby6" path="res://sample_haikei4.png" id="10_788es"]
-[ext_resource type="Texture2D" uid="uid://bqece4byx7ohs" path="res://NG.png" id="10_r35ti"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cn3v6"]
 
 [node name="Main" type="Node2D"]
 scale = Vector2(1.95, 1.95)
@@ -39,13 +40,13 @@ position = Vector2(0.512819, -621.539)
 scale = Vector2(0.3875, 0.3875)
 texture = ExtResource("10_788es")
 
-[node name="Ng" type="Sprite2D" parent="."]
-position = Vector2(470.256, -620.513)
-scale = Vector2(0.364957, 0.364957)
-texture = ExtResource("10_r35ti")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.66, 0.66)
+
+[node name="menu" type="Sprite2D" parent="Camera2D"]
+position = Vector2(3.33331, 153.333)
+scale = Vector2(381.026, 254.359)
+texture = SubResource("CanvasTexture_cn3v6")
 
 [node name="btn_up" type="Button" parent="Camera2D"]
 offset_left = -20.2596
