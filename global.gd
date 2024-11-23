@@ -20,6 +20,7 @@ func move_pos(x: float,y: float):
 	else:
 		print("Camera2Dオブジェクトが見つけられませんでした。")
 	
+	#Todo:IF文でXとYの上限下減を設定して、数値をループもしくは加算減算できないように条件分岐を入れる。
 	#カメラの位置を更新(現在の座標+引数の数値)
 	camera.position.x += x
 	camera.position.y += y
