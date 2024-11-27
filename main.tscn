@@ -1,16 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhsm2gjt02k0y"]
+[gd_scene load_steps=8 format=3 uid="uid://dhsm2gjt02k0y"]
 
 [ext_resource type="Texture2D" uid="uid://bxm3xo1l08vyc" path="res://icon.svg" id="1_rkhcw"]
-[ext_resource type="Script" path="res://btn_up.gd" id="2_4j07f"]
-[ext_resource type="Script" path="res://btn_down.gd" id="3_dylc4"]
 [ext_resource type="Script" path="res://btn_right.gd" id="4_q73wi"]
 [ext_resource type="Script" path="res://btn_left.gd" id="5_miasj"]
 [ext_resource type="Texture2D" uid="uid://d0bw58s3onibx" path="res://sample_haikei.png" id="7_gqobr"]
 [ext_resource type="Texture2D" uid="uid://d2j50fli4dq28" path="res://sample_haikei2.png" id="8_htae0"]
 [ext_resource type="Texture2D" uid="uid://dhxtv8oijttyx" path="res://sample_haikei3.png" id="9_647dn"]
 [ext_resource type="Texture2D" uid="uid://clkimmd58pby6" path="res://sample_haikei4.png" id="10_788es"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_cn3v6"]
 
 [node name="Main" type="Node2D"]
 scale = Vector2(1.95, 1.95)
@@ -21,48 +17,26 @@ scale = Vector2(3.63742, 4.82733)
 texture = ExtResource("1_rkhcw")
 
 [node name="SampleHaikei" type="Sprite2D" parent="."]
-position = Vector2(466.154, 0.341772)
-scale = Vector2(0.387607, 0.387607)
+scale = Vector2(0.389, 0.389)
 texture = ExtResource("7_gqobr")
 
 [node name="SampleHaikei2" type="Sprite2D" parent="."]
-position = Vector2(-466.667, 2.84217e-14)
+position = Vector2(466, 0)
 scale = Vector2(0.388782, 0.388782)
 texture = ExtResource("8_htae0")
 
 [node name="SampleHaikei3" type="Sprite2D" parent="."]
-position = Vector2(-2.0512, 623.077)
-scale = Vector2(0.3875, 0.3875)
+position = Vector2(932, 0)
+scale = Vector2(0.389, 0.389)
 texture = ExtResource("9_647dn")
 
 [node name="SampleHaikei4" type="Sprite2D" parent="."]
-position = Vector2(0.512819, -621.539)
-scale = Vector2(0.3875, 0.3875)
+position = Vector2(1398, 0)
+scale = Vector2(0.389, 0.389)
 texture = ExtResource("10_788es")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.66, 0.66)
-
-[node name="menu" type="Sprite2D" parent="Camera2D"]
-position = Vector2(3.33331, 153.333)
-scale = Vector2(381.026, 254.359)
-texture = SubResource("CanvasTexture_cn3v6")
-
-[node name="btn_up" type="Button" parent="Camera2D"]
-offset_left = -20.2596
-offset_top = -289.231
-offset_right = 19.7404
-offset_bottom = -258.231
-text = "移動"
-script = ExtResource("2_4j07f")
-
-[node name="btn_down" type="Button" parent="Camera2D"]
-offset_left = -19.6265
-offset_top = 255.897
-offset_right = 20.3735
-offset_bottom = 286.897
-text = "移動"
-script = ExtResource("3_dylc4")
 
 [node name="btn_right" type="Button" parent="Camera2D"]
 offset_left = 178.462
@@ -80,7 +54,5 @@ offset_bottom = 16.755
 text = "移動"
 script = ExtResource("5_miasj")
 
-[connection signal="button_down" from="Camera2D/btn_up" to="Camera2D/btn_up" method="_on_button_down"]
-[connection signal="button_down" from="Camera2D/btn_down" to="Camera2D/btn_down" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_right" to="Camera2D/btn_right" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_left" to="Camera2D/btn_left" method="_on_button_down"]

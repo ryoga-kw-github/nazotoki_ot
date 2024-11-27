@@ -1,1 +1,4 @@
 res://main.tscn
+res://global.gd
+res://btn_right.gd
+res://btn_left.gd
