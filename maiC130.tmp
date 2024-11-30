@@ -34,7 +34,7 @@ offset_top = -618.6
 offset_right = -322.2
 offset_bottom = -426.6
 theme_override_font_sizes/font_size = 40
-text = "a"
+text = "テストオブジェクト"
 script = ExtResource("3_0alji")
 
 [node name="SampleHaikei2" type="Sprite2D" parent="."]

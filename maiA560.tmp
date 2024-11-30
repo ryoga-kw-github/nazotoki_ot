@@ -24,6 +24,7 @@ scale = Vector2(0.389, 0.389)
 texture = ExtResource("7_gqobr")
 
 [node name="Button" type="Button" parent="SampleHaikei"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.176
 anchor_top = 0.076
@@ -34,7 +35,7 @@ offset_top = -618.6
 offset_right = -322.2
 offset_bottom = -426.6
 theme_override_font_sizes/font_size = 40
-text = "a"
+text = "テストオブジェクト"
 script = ExtResource("3_0alji")
 
 [node name="SampleHaikei2" type="Sprite2D" parent="."]
