@@ -1,4 +1,4 @@
 res://main.tscn
+res://TestObject_Button.gd
 res://control.gd
 res://label.gd
-res://TestObject_Button.gd
