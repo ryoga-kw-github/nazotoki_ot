@@ -5,20 +5,11 @@
 [ext_resource type="Script" path="res://btn_right.gd" id="4_q73wi"]
 [ext_resource type="Script" path="res://btn_left.gd" id="5_miasj"]
 [ext_resource type="Texture2D" uid="uid://d0bw58s3onibx" path="res://sample_haikei.png" id="7_gqobr"]
+[ext_resource type="Script" path="res://control.gd" id="8_2rnn3"]
 [ext_resource type="Texture2D" uid="uid://d2j50fli4dq28" path="res://sample_haikei2.png" id="8_htae0"]
 [ext_resource type="Texture2D" uid="uid://dhxtv8oijttyx" path="res://sample_haikei3.png" id="9_647dn"]
 [ext_resource type="Script" path="res://label.gd" id="9_rj6o5"]
 [ext_resource type="Texture2D" uid="uid://clkimmd58pby6" path="res://sample_haikei4.png" id="10_788es"]
-
-[sub_resource type="GDScript" id="GDScript_pd6vh"]
-script/source = "extends Control
-
-# カメラの追従処理（必要に応じて実装）
-func _ready():
-	var camera = get_parent()
-	if camera and camera is Camera2D:
-		camera.add_child(self)  # 確実にカメラに追従させる
-"
 
 [node name="Main" type="Node2D"]
 scale = Vector2(1.95, 1.95)
@@ -33,6 +24,7 @@ scale = Vector2(0.389, 0.389)
 texture = ExtResource("7_gqobr")
 
 [node name="Button" type="Button" parent="SampleHaikei"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.176
 anchor_top = 0.076
@@ -43,7 +35,7 @@ offset_top = -618.6
 offset_right = -322.2
 offset_bottom = -426.6
 theme_override_font_sizes/font_size = 40
-text = "あいてむ１"
+text = "テストオブジェクト"
 script = ExtResource("3_0alji")
 
 [node name="SampleHaikei2" type="Sprite2D" parent="."]
@@ -88,7 +80,7 @@ offset_left = 1.0
 offset_top = 4.0
 offset_right = 40.0
 offset_bottom = 40.0
-script = SubResource("GDScript_pd6vh")
+script = ExtResource("8_2rnn3")
 
 [node name="Panel" type="Panel" parent="Camera2D/Control"]
 layout_mode = 0
@@ -109,6 +101,5 @@ offset_bottom = 106.0
 grow_horizontal = 2
 script = ExtResource("9_rj6o5")
 
-[connection signal="button_down" from="SampleHaikei/Button" to="SampleHaikei/Button" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_right" to="Camera2D/btn_right" method="_on_button_down"]
 [connection signal="button_down" from="Camera2D/btn_left" to="Camera2D/btn_left" method="_on_button_down"]

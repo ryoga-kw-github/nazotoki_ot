@@ -1,6 +1,8 @@
+Button
+Label
+Panel
+Control
 Sprite2D
 Window
 CanvasLayer
-Button
-Label
 Camera2D
